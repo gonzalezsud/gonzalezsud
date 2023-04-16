@@ -3,3 +3,16 @@
 font-family: 'Montserrat', sans-serif;
 font-family: 'Mulish', sans-serif;
 */
+
+
+.col {
+    max-width: 424px;
+  }
+  
+  .card-img-modified {
+    aspect-ratio: 1 / 1;
+  }
+  
+  .card-img-modified img {
+    object-fit: cover;
+  }
