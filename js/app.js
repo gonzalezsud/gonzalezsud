@@ -8,9 +8,14 @@ const lugares = dom.$('#lugares');
 
 const datos = await data.getData();
 
-const guests = data.getGuests(datos);
+//const categories = data.getCategories(datos);
 
-console.log(datos);
+const huespedes = data.getHuespedes(datos);
+
+const city = data.GetCity(datos);
+
+//const huespedes = data.getHuespedes(datos);
+console.log(city);
 
 //console.log(guests);
 

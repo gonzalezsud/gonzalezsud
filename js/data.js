@@ -12,18 +12,32 @@ const getData = async () => {
  return data;
 };
 
-const getGuests = (data) => {
-let guests = data.map( elem => elem.maxGuests[0]);
-// guests = new Set(guests);
+//const getCategories = (data) => {
+//const categories = data.map( elem => elem.maxGuests);
+//console.log(categories);
 
-guests  = [...guests];
-console.log(guests);
-return guests
-} 
+//return categories;
 
+//};
+
+const getHuespedes = (data) =>  {
+  const huespedes = data.map( elem => elem.maxGuests);
+  console.log(huespedes);
+
+  return huespedes;
+};
+
+const GetCity = (data) => {
+  const city = data.map( elem => elem.city);
+
+  return city;
+
+}
 export default {
   getData,
-  getGuests
+  //getCategories,
+  getHuespedes, 
+  GetCity
 }
 
 

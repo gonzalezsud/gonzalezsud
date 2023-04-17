@@ -5,6 +5,7 @@ con la manipulación del DOM en la aplicación
 const $ = (selector) => document.querySelector(selector);
 
 
+
 const newcard = (obj) => {
     const div = document.createElement('div');
     div.className = 'col';
@@ -32,8 +33,23 @@ const newcard = (obj) => {
     
     `
     return div;
-}
+};
+
+const huespedes  = (huespedes) => {
+ const list = $('#huespedes');
+
+ huespedes.forEach( elemn => {
+  const li = newE('li');
+  li.className = `pointer py-1 px-3 ${elemn === 'ALL' ? 'acc-categorie' : '' }`;
+  li.innerHTML = `<a href="#${elemn}"> ${elemn}</a>`;
+  list.appendChild(li);
+ })
+
+};
+
+
 export default {
+    huespedes,
     newcard,
     $,
 }
