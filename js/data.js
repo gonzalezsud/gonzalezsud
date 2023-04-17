@@ -9,11 +9,21 @@ const getData = async () => {
     .then(response => response.json())
     .then( json => json)
 
-  return data;
-}
+ return data;
+};
+
+const getGuests = (data) => {
+let guests = data.map( elem => elem.maxGuests[0]);
+// guests = new Set(guests);
+
+guests  = [...guests];
+console.log(guests);
+return guests
+} 
 
 export default {
-  getData
+  getData,
+  getGuests
 }
 
 
