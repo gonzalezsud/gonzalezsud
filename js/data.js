@@ -12,22 +12,16 @@ const getData = async () => {
  return data;
 };
 
-//const getCategories = (data) => {
-//const categories = data.map( elem => elem.maxGuests);
-//console.log(categories);
-
-//return categories;
-
-//};
-
 const getHuespedes = (data) =>  {
-  const huespedes = data.map( elem => elem.maxGuests);
+  let huespedes = data.map( elem => elem.maxGuests);
+  
+  //huespedes = new Set(huespedes);
   console.log(huespedes);
 
   return huespedes;
 };
 
-const GetCity = (data) => {
+const getCity = (data) => {
   const city = data.map( elem => elem.city);
 
   return city;
@@ -35,9 +29,8 @@ const GetCity = (data) => {
 }
 export default {
   getData,
-  //getCategories,
   getHuespedes, 
-  GetCity
+  getCity
 }
 
 

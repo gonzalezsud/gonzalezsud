@@ -4,10 +4,10 @@ con la manipulación del DOM en la aplicación
 */
 const $ = (selector) => document.querySelector(selector);
 
-
+const newE = tag => document.createElement(tag);
 
 const newcard = (obj) => {
-    const div = document.createElement('div');
+    const div = newE('div');
     div.className = 'col';
 
     //insertar los elementos del card
@@ -35,21 +35,40 @@ const newcard = (obj) => {
     return div;
 };
 
-const huespedes  = (huespedes) => {
- const list = $('#huespedes');
+// const huespedes  = (huespedes) => {
+//  const list = $('#huespedes');
 
- huespedes.forEach( elemn => {
-  const li = newE('li');
-  li.className = `pointer py-1 px-3 ${elemn === 'ALL' ? 'acc-categorie' : '' }`;
-  li.innerHTML = `<a href="#${elemn}"> ${elemn}</a>`;
-  list.appendChild(li);
- })
+//  huespedes.forEach( elemn => {
+//   const li = newE('li');
+//   li.className = `pointer py-1 px-3 ${elemn === 'ALL' ? 'acc-categorie' : '' }`;
+//   li.innerHTML = `<a href="#${elemn}"> ${elemn}</a>`;
+//   list.appendChild(li);
+//  })
 
+// };
+
+const addCity = (city) => {
+ 
+  const list = $('#city');
+
+  city.forEach( elem => { 
+ const li = newE('li');
+ // li.className = `${elem === }`
+
+ li.innerHTML = elem; 
+ 
+ list.appenchild(li);
+ 
+ 
+ 
+}) 
+return city
 };
 
 
 export default {
-    huespedes,
+  addCity,  
+  huespedes,
     newcard,
     $,
 }
