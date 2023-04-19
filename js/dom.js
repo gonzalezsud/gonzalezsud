@@ -53,11 +53,11 @@ const addCity = (city) => {
 
   city.forEach( elem => { 
  const li = newE('li');
- // li.className = `${elem === }`
+ // li.className = `${elem ===  }`;
 
- li.innerHTML = elem; 
+ li.innerHTML = `<a class="ac-categori" id="${elem}" href="#${elem}">${elem}</a>`; 
  
- list.appenchild(li);
+ //list.appenchild(li);
  
  
  

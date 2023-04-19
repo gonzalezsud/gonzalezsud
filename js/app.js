@@ -12,9 +12,9 @@ const city = data.getCity(datos);
 
 dom.addCity(city);
 
-const catList = dom.$('#city');
+// const catList = [...dom.$('#city').children];
 
-console.log(catList);
+// console.log(catList);
 
 const huespedes = data.getHuespedes(datos);
 

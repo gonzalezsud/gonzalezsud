@@ -26,11 +26,19 @@ const getCity = (data) => {
 
   return city;
 
+};
+
+const filted = (arr, filtro) => {
+let filtered = arr.filter( elem => elem.city.name === filtro)
+
+return filtered 
 }
+
 export default {
   getData,
   getHuespedes, 
-  getCity
+  getCity,
+  //filtrar 
 }
 
 
