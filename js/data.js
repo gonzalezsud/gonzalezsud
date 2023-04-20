@@ -29,15 +29,21 @@ const getCity = (data) => {
 };
 
 const filted = (arr, filtro) => {
-let filtered = arr.filter( elem => elem.city.name === filtro)
+let filtered = arr.filter( elem => elem.city === filtro)
 
 return filtered 
 }
-
+const filthuespedes = (arr, filtro) => {
+  let filtered = arr.filter( elem => elem.maxGuests >= filtro)
+  
+  return filtered 
+  }
 export default {
   getData,
   getHuespedes, 
   getCity,
+  filted,
+  filthuespedes
   //filtrar 
 }
 

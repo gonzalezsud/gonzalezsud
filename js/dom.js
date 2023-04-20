@@ -6,6 +6,20 @@ const $ = (selector) => document.querySelector(selector);
 
 const newE = tag => document.createElement(tag);
 
+const lugares = $('#lugares');
+
+
+const buscador2 = $("#city");
+console.log(buscador2);
+buscador2.addEventListener("click", () =>{
+  console.log("hola");
+ });
+
+ 
+  
+
+
+
 const newcard = (obj) => {
     const div = newE('div');
     div.className = 'col';
@@ -65,10 +79,18 @@ const addCity = (city) => {
 return city
 };
 
+const muestraCard = (datos) => {
+  lugares.innerHTML = ""
+  datos.forEach( Element =>{
+   const card = newcard(Element)
+   lugares.appendChild(card);
+   })
+}
 
 export default {
   addCity,  
   huespedes,
     newcard,
     $,
+    muestraCard
 }

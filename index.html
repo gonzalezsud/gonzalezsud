@@ -39,19 +39,120 @@
       <img src="./img/logo.png" alt="">
     </div>
 
+    
+
+    
     <article class="d-flex rounded-4">
-      <p id="city" class="p-3 m-0 cursor-text">Add location
+      <p id="city" class="hoverable icon-link icon-link-hover p-3 m-0 cursor-text" data-bs-toggle="modal" data-bs-target="#exampleModal">Add location
         <ul id="city"></ul>
       </p>
-      <p class="p-3 m-0 border-start border-end border-light-subtle user-select-none" id="huespedes">Add guests</p>
+      <p class="hoverable p-3 m-0 border-start border-end border-light-subtle user-select-none" id="huespedes">Add guests</p>
       <!-- Icono Search de google Icons -->
+      
       <span class="material-symbols-outlined text-danger p-3 pointer">
         search
       </span>
+      <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen h-75">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+        
+        <div class="btn-group">
+          <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            LOCATION
+          </button>
+          <ul id="list-city" class="dropdown-menu">
+            <li><span class="material-symbols-outlined">
+              location_on
+              </span>Helsinki, Finland</li>
+            <li><span class="material-symbols-outlined">
+              location_on
+              </span>Turku, Finland</li>
+            <li><span class="material-symbols-outlined">
+              location_on
+              </span>Oulu, Finland</li>
+            <li><span class="material-symbols-outlined">
+              location_on
+              </span>Vaasa, Finland</li>
+          </ul>
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-secondary btn-lg" type="button">
+            GUESTS
+          </button>
+          
+          <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            
+
+            <!-- <div class="">
+              <div class="guest_option">
+               <h4>Adults <span class="subtitle">Ages 13 or above</span></h4>
+               <div class="option_value">
+                <button type="button" class="btn_option">-</button>
+                <p class="content">0</p>
+                <button type="button" class="btn_option">+</button></div></div>
+                <div class="guest_option">
+                  <h4>Childrens 
+                    <span class="subtitle">Ages 2-12</span>
+                 </h4>
+                 <div class="option_value">
+                 <button type="button" class="btn_option">-</button>
+                 <p class="content">0</p>
+                <button type="button" class="btn_option">+</button>
+               </div>
+              </div>
+           </div> -->
+
+
+          </ul>
+        </div>
+        
+          <button id="filtro-boton" class="btn btn-secondary" data-bs-dismiss="modal" type="button">
+            
+            Buscar
+          </button>
+          <div class="">
+              <div class="guest_option">
+               <h4>Adults <span class="subtitle">Ages 13 or above</span></h4>
+               <div class="option_value">
+                <button id="menos-adultos" type="button" class="btn_option">-</button>
+                <p id="contador-adultos" class="content">0</p>
+                <button id="mas-adultos" type="button" class="btn_option">+</button></div></div>
+                <div class="guest_option">
+                  <h4>Childrens 
+                    <span class="subtitle">Ages 2-12</span>
+                 </h4>
+                 <div class="option_value">
+                 <button id="menos-niños" type="button" class="btn_option">-</button>
+                 <p id="contador-niños" class="content">0</p>
+                <button id="mas-niños" type="button" class="btn_option">+</button>
+               </div>
+              </div>
+           </div>
+        
+      </div>
+
+      
+
+      
+    </div>
+  </div>
+</div>
+
     </article>
+
+    
+
+
+    
   </header>
   <main>
-    <div class="d-flex mt-5 justify-content-between">
+    <div class="variables.jsd-flex mt-5 justify-content-between">
       <h1 class="fs-3">Stays in 
         <!-- Aquí va el lugar -->
         <span id="place"></span>
@@ -61,7 +162,7 @@
 
     <section class="lugares container d-flex flex-wrap justify-content-evenly gap-4" id="lugares">
       <!-- <div class="card-img row row-cols-1 row-cols-md-2 row-cols-lg-3"> -->
-        <!-- Aqui van los cards, cada uno debe llevar la clase 'col' -->
+        <!-- Aqui van los caStays in Finlandrds, cada uno debe llevar la clase 'col' -->
         
     </section>
   </main>

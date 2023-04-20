@@ -16,3 +16,7 @@ font-family: 'Mulish', sans-serif;
   .card-img-modified img {
     object-fit: cover;
   }
+ 
+  .hoverable:hover {
+    cursor: pointer;
+  }
