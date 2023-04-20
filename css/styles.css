@@ -6,7 +6,7 @@ font-family: 'Mulish', sans-serif;
 
 
 .col {
-    max-width: 424px;
+    max-width: 224px;
   }
   
   .card-img-modified {
@@ -19,4 +19,11 @@ font-family: 'Mulish', sans-serif;
  
   .hoverable:hover {
     cursor: pointer;
+  }
+  .card-img-modified {
+    aspect-ratio: 1 / 1;
+  }
+  
+  .card-img-modified img {
+    object-fit: cover;
   }
